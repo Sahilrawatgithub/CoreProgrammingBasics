@@ -1,0 +1,18 @@
+# Build Folders
+bin/
+obj/
+out/
+
+# Visual Studio Specific
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.VC.db
+
+# Rider & Resharper
+.idea/
+*.sln.iml
+
+#

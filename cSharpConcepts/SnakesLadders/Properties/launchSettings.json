@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "SnakesLadders": {
+      "commandName": "Project"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker"
+    }
+  }
+}
