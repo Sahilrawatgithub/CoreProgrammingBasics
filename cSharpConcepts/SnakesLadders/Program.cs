@@ -54,6 +54,7 @@ class SnakeLadderGame
             int roll = RollDice();
             Console.WriteLine($"Player {currentPlayer + 1} rolls: {roll}");
 
+            int oldPosition=players[currentPlayer];
             int newPosition = MovePlayer(players[currentPlayer], roll);
 
             if (newPosition == players[currentPlayer])
@@ -64,6 +65,15 @@ class SnakeLadderGame
             {
                 players[currentPlayer] = newPosition;
                 Console.WriteLine($"Player {currentPlayer + 1} moves to: {players[currentPlayer]}");
+            }
+            if (oldPosition > newPosition - roll)
+            {
+                Console.WriteLine($"Player {currentPlayer+1} got bit by snake");
+            }
+            if(oldPosition < newPosition - roll)
+            {
+                Console.WriteLine($"Player {currentPlayer + 1} climbed a ladder, you get an extra turn");
+                continue;
             }
 
             rollsCount++;
